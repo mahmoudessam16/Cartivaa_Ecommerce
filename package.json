@@ -3,13 +3,15 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --turbopack",
+    "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
     "@clerk/nextjs": "^6.23.2",
+    "axios": "^1.10.0",
+    "cloudinary": "^2.7.0",
     "inngest": "^3.40.0",
     "mongoose": "^8.16.1",
     "next": "14.2.5",
