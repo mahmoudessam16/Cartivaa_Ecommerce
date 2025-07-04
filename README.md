@@ -1,36 +1,81 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Cartivaa – Modern E-Commerce Platform
+
+A full-stack e-commerce website built using **Next.js**, **MongoDB**, **Tailwind CSS**, **Inngest**,**Clerk**, and **Cloudinary** . Cartivaa offers a clean, scalable base for any online store with authentication, dynamic product pages, and more.
+
+---
+
+## Live Demo
+
+[Cartivaa on Vercel](https://ecommerce-platform-coral.vercel.app)
+
+---
+
+## Tech Stack
+
+| Layer        | Tools / Libraries                  |
+| ------------ | ---------------------------------- |
+| Frontend     | Next.js (App Router)               |
+| Backend      | MongoDB, Mongoose (via API Routes) |
+| Auth         | Clerk                              |
+| Styling      | Tailwind CSS                       |
+| Media Upload | Cloudinary                         |
+| Event Queue  | Inngest (event handling pipeline)  |
+| Hosting      | Vercel                             |
+
+---
+
+## Features
+
+- Modern responsive UI
+- User authentication via Clerk
+- Dynamic product cards (MVP)
+- Image uploads via Cloudinary
+- Toast notifications
+- Contact & About pages
+- Modular folder structure
+- Environment-based config
+
+---
 
 ## Getting Started
 
-First, run the development server:
+### 1️⃣ Clone the repo
 
 ```bash
+git clone https://github.com/mahmoudessam16/Cartivaa_Ecommerce.git
+cd Cartivaa_Ecommerce
+2️⃣ Install dependencies
+Use --legacy-peer-deps to avoid version conflicts:
+
+bash
+Copy
+Edit
+npm install --legacy-peer-deps
+3️⃣ Create .env.local file
+Create a .env.local file in the root and add your environment variables:
+
+env
+Copy
+Edit
+# Public
+NEXT_PUBLIC_CURRENCY=$
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=your_clerk_public_key
+
+# Private
+CLERK_SECRET_KEY=your_clerk_secret_key
+MONGODB_URI=your_mongo_uri
+INNGEST_SIGNING_KEY=your_inngest_signing_key
+INNGEST_EVENT_KEY=your_inngest_event_key
+
+# Cloudinary
+CLOUDINARY_CLOUD_NAME=your_cloud_name
+CLOUDINARY_API_KEY=your_cloudinary_api_key
+CLOUDINARY_API_SECRET=your_cloudinary_api_secret
+⚠️ Important: Never commit your .env.local to GitHub. It contains secrets.
+
+4️⃣ Run Development Server
+bash
+Copy
+Edit
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
